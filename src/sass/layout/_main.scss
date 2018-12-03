@@ -1,0 +1,177 @@
+html {
+	font-size: $base-font-size;
+}
+body {
+ 	font-family: $base-font-family; 
+	line-height: $base-line-height;
+	color: $base-content-color;
+	font-size: 1.2rem;
+}
+
+a { 
+	color: $base-link-color;
+	text-decoration: none;  
+
+	&:hover {
+		color: $base-link-hover-color;
+	}
+} 
+
+#wrapper { 
+	position: relative;
+	vertical-align: top;
+	width: 100%; 
+	overflow: hidden;
+}
+
+.container {
+	max-width: $conteiner-width;
+	padding: 0 #{$grid-gutter-width / 2};
+	margin: 0 auto;
+}  
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -#{$grid-gutter-width / 2};
+}
+
+.col {
+  padding: 0 #{$grid-gutter-width / 2};
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 100%;
+}     
+
+@each $key, $viewport in $viewports {
+	@media all and (min-width: $viewport) {
+		@for $i from 1 through $grid-count {
+			.col-#{$key}-#{$i} {
+				width: 100% / $grid-count * $i;
+			}
+		}
+	}
+}
+
+.btn {
+    display: inline-block; 
+    line-height: 1;
+    font-size: 1.8rem; 
+} 
+
+.main {
+	padding-top: 0px; 
+
+	@media (min-width: $tablet-width) and (orientation: landscape) {
+		padding-top: 30px; 
+	}
+}
+
+.main-title {  
+	line-height: 3.2rem;
+	color: $black;  
+	text-align: center;
+	margin-bottom: 25px;
+
+	h2 { 
+		font-size: 3.2rem;
+		font-weight: 600;
+	} 
+}
+
+.main-subtitle {
+	line-height: 2.4rem;
+	color: $black-light;  
+	text-align: center; 
+	margin-bottom: 45px;
+
+	@media (min-width: $tablet-width) and (orientation: landscape) { 
+		margin-bottom: 90px;
+	}
+
+	p {  
+		font-size: 2rem; 
+	} 
+}
+
+.main-icon {
+	text-align: center;
+
+	i { 
+		font-size: 40px; 
+		color: $black;
+	}
+}
+
+.main-blocks {
+	color: $black;   
+
+	h3 {
+		line-height: 2.4rem;
+		font-size: 2.1rem;  
+		font-weight: 600;
+		margin-bottom: 20px;
+		text-align: center;
+
+		@media (min-width: $tablet-width) and (orientation: landscape) { 
+			text-align: left;
+		}
+	}
+
+	p {
+		line-height: 2rem; 
+		font-size: 1.6rem; 
+		color: $grey-light;
+		text-align: center; 
+		margin-bottom: 40px;
+
+		@media (min-width: $tablet-width) and (orientation: landscape) { 
+			text-align: left;
+			margin-bottom: 0px;
+		}
+	}
+}
+
+.main-section {
+	margin-bottom: 160px; 
+}
+
+.section-form {
+	background-color: $black; 
+	padding-top: 90px; 
+
+	.main-title {
+		color: $yellow;   
+	}
+
+	.main-subtitle {
+		color: $grey-light;   
+		margin-bottom: 0px;
+		padding-bottom: 40px; 
+	}
+
+	.form-inline {
+		padding-bottom: 40px;   
+	}
+
+	.btn-primary {
+		line-height: 2.4rem; 
+		font-size: 1.6rem; 
+		color: $black; 
+		font-weight: 600;
+		text-transform: uppercase;
+		background-color: $yellow;
+		border-color: $yellow;
+		padding-top: 10px;
+		padding-bottom: 10px; 
+	}
+
+	input[type="email"].form-control {
+		padding: 10px 20px; 
+		line-height: 2.4rem; 
+		font-size: 1.6rem;  
+		height: auto; 
+
+	}
+
+}

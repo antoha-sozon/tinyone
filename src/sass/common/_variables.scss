@@ -1,0 +1,36 @@
+//COLORS
+$grey: #555555;
+$grey-light: #898989; 
+$red: #ff2d2d; 
+$black: #010101;
+$black-light: #313841;
+$yellow: #fcdb00;
+
+
+//BASE ARGUMENTS
+$base-font-family: 'Open Sans', sans-serif;
+$base-font-size: 10px;
+$base-line-height: 1.5;
+$base-content-color: $grey;
+$base-link-color: $red;
+$base-link-hover-color: $red;
+ 
+//GRID ARGUMENTS
+$grid-gutter-width: 30px;
+$grid-count: 12;
+
+//VIEVPORT SIZES
+$mobile-width: 350px;
+$tablet-width: 768px;
+$conteiner-width: 960px; 
+$large-width: 1300px; 
+
+$viewports: (  
+	xs: $mobile-width,
+	sm: $tablet-width,
+	md: $conteiner-width,
+	lg: $large-width
+);  
+
+
+

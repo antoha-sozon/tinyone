@@ -1,0 +1,155 @@
+.header {
+	background-color: $yellow;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-bottom: 35px;
+
+	@media (min-width: $tablet-width) and (orientation: landscape) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		margin-bottom: 75px;
+	}
+	
+	.slick-slide {
+		outline: none;
+	}
+
+	.slick-list {
+		padding-bottom: 45px; 
+	}
+
+	.slick-dots {
+	    padding: 0;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		li {
+			button {
+			    text-indent: -9999px;
+			    background: #fff;
+			    border: none;
+			    border-radius: 50%;
+			    width: 15px;
+			    height: 15px;
+			    margin-left: 5px;
+				margin-right: 5px;
+				outline: none;
+				opacity: .55;
+
+				&:hover {
+					opacity: 1;
+				}
+			} 
+
+			&.slick-active {
+				button {
+					opacity: 1;
+				}
+			} 
+		}
+	}
+}
+
+.navigate {
+	margin-bottom: 35px;
+
+	@media (min-width: $tablet-width) and (orientation: landscape) {
+		margin-bottom: 70px;
+	}
+}
+
+.navbar-light {
+
+	.navbar-nav {
+		
+		li {
+		    text-align: center;
+
+			@media (min-width: $tablet-width) and (orientation: landscape) {
+			    text-align: left;
+			}
+			
+			&:last-child {
+
+				a {
+					padding-right: 0px;
+				}
+			}
+		}
+
+		.nav-link {
+			color: $black;
+			font-size: 2.2rem;
+			line-height: 2rem;
+			font-weight: 700;    
+
+    		@media (min-width: $tablet-width) and (orientation: landscape) {
+			    text-align: left;
+    			padding-right: 70px;
+			}
+
+    		&:hover,
+    		&:focus {
+				color: rgba($black, .85); 
+    		}
+		}
+	}
+}
+
+.slider-img {   
+
+	img {
+		margin: 0 auto; 
+	}
+}
+
+.slider-header {
+	line-height: 1.8rem;
+	color: $black; 
+	margin-bottom: 25px;
+
+	h1 { 
+		font-size: 3.2rem;
+		font-weight: 600;
+	} 
+}
+
+.slider-subtitle {
+	font-size: 2rem;
+	line-height: 2.4rem; 
+	color: $black-light; 
+	margin-bottom: 25px; 
+}
+
+.slider-text { 
+	font-size: 1.6rem;
+	line-height: 2rem; 
+	color: $grey;  
+	margin-bottom: 40px; 
+} 
+
+.icons-os {
+	padding: 0;
+	list-style-type: none;
+
+	li {
+		display: inline-block;
+	    font-size: 42px;
+	    padding-right: 35px;
+
+	    &:last-child {
+	    	padding-right: 0px;  
+	    }
+
+	    a {
+	    	color: $black;
+
+	    	&:hover {
+	    		text-decoration: none;
+
+	    	}
+	    }
+	}
+}
